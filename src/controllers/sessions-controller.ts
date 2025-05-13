@@ -1,8 +1,12 @@
 import { Request, Response } from "express"
+import { authConfig } from "@/configs/auth"
 import { AppError } from "@/utils/AppError"
 import { compare } from "bcrypt"
+import { sign } from "jsonwebtoken"
 import { prisma } from "@/database/prisma"
 import { z } from "zod"
+
+
 
 class SessionsController {
  async create(request: Request, response: Response) {
@@ -27,7 +31,14 @@ class SessionsController {
       throw new AppError("E-mail ou senha inválidos.", 401)
     }
 
-    return response.json({ message: "ok"})
+    const { secret, expiresIn } = authConfig.jwt
+
+    const token = sign({ role: user.role ?? "member" }, secret, {
+      subject: user.id,
+      expiresIn
+    })
+
+    return response.json(token)
   }  
 }
 
