@@ -70,6 +70,7 @@ model TeamMember {
 
 model Task {
   id String @id @default(uuid())
+  userId String @map("user_id")
   title String
   description String
   status TaskStatus @default(pending)

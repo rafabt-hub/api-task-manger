@@ -10,5 +10,9 @@ const taskController = new TaskController()
 
 taskRoutes.use(ensureAuthenticated, verifyUserAuthorization(["admin"]))
 taskRoutes.post("/", taskController.create)
+taskRoutes.get("/", taskController.getAll);
+taskRoutes.get("/:id", taskController.getById);
+taskRoutes.put("/:id", taskController.update);
+taskRoutes.delete("/:id", taskController.delete);
 
 export { taskRoutes }
