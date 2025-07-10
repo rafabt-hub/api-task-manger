@@ -1,9 +1,9 @@
 # API - Task Manager 📝
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Tech](https://img.shields.io/badge/tech-Node.js%20%26%20Fastify-68A063?logo=node.js)
+![Tech](https://img.shields.io/badge/tech-Node.js%20%26%20Express-68A063?logo=node.js)
 
-A RESTful API for a task management application, built with Node.js, Fastify, Prisma, and PostgreSQL. It allows creating, listing, updating, and deleting tasks.
+A RESTful API for a task management application, built with Node.js, Express, Prisma, and PostgreSQL. It allows creating, listing, updating, and deleting tasks.
 
 ## ✨ Features
 
@@ -16,7 +16,7 @@ A RESTful API for a task management application, built with Node.js, Fastify, Pr
 ## 🛠️ Tech Stack
 
 -   **Runtime:** [Node.js](https://nodejs.org/)
--   **Framework:** [Fastify](https://www.fastify.io/)
+-   **Framework:** [Express.js](https://expressjs.com/pt-br/)
 -   **Language:** [TypeScript](https://www.typescriptlang.org/)
 -   **ORM:** [Prisma](https://www.prisma.io/)
 -   **Database:** [PostgreSQL](https://www.postgresql.org/)
@@ -54,7 +54,7 @@ To run this project locally, you'll need Node.js, npm, and a running PostgreSQL 
     ```sh
     npm run dev
     ```
-    The API will be available at `http://localhost:3333`.
+    The API will be available at `http://localhost:3000`.
 
 ## 🌐 API Endpoints
 
@@ -77,7 +77,7 @@ This project is licensed under the MIT License.
 
   <br>
 
-  > Uma API RESTful para uma aplicação de gerenciamento de tarefas, construída com Node.js, Fastify, Prisma e PostgreSQL. Permite criar, listar, atualizar e deletar tarefas.
+  > Uma API RESTful para uma aplicação de gerenciamento de tarefas, construída com Node.js, Express, Prisma e PostgreSQL. Permite criar, listar, atualizar e deletar tarefas.
 
   ### ✨ Funcionalidades
 
@@ -96,6 +96,6 @@ This project is licensed under the MIT License.
   3.  **Instale as dependências:** `npm install`.
   4.  **Configure as variáveis de ambiente:** Crie um arquivo `.env` na raiz e adicione sua string de conexão do banco de dados (veja o exemplo na seção em inglês).
   5.  **Execute as migrações do banco:** `npx prisma migrate dev`.
-  6.  **Inicie o servidor:** `npm run dev`. A API estará rodando em `http://localhost:3333`.
+  6.  **Inicie o servidor:** `npm run dev`. A API estará rodando em `http://localhost:3000`.
 
 </details>
